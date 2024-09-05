@@ -9,11 +9,6 @@ server.use(cors({
     credentials: true
 }))
 
-server.get('/',(req,res) => {
-    console.log('we get your request and responsing your response');
-    res.send({message: "we get your request and responsing your response"})
-})
-
 server.get('/api/about',(req,res) => {
     console.log('we get your request and responsing your response');
     res.send({message: "we get your request and responsing your response"})
