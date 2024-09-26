@@ -7,7 +7,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: 'https://frontend-delta-swart-48.vercel.app/',
+    origin: *,
     methods: ['GET','POST','PUT','DELETE'],
     credentials: true
 }))
