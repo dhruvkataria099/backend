@@ -20,6 +20,18 @@ app.get('/api/getData',(req,res) => {
     }
 })
 
+app.post('/api/createCookie', (req,res) => {
+    try {
+        res.cookie('token', 'this is name',{
+            httpOnly: true,
+            secure: true,
+            sameSite: true
+        }).send({message: 'cookie set succ!'})
+    } catch (error) {
+        res.send({message: error.message})
+    }
+})
+
 app.post('/api/createData', (req,res) => {
     try {
         const {username, email} = req.body
